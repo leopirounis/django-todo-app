@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Bytecode and logs
+*.log
+
+# SQLite database
+*.sqlite3
+
+# Environment variables
+.env
+
+# Django static/media files (optional if generated dynamically)
+staticfiles/
+media/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# VSCode and other editor settings
+.vscode/
+.idea/
+*.swp
+
+# macOS & Linux system files
+.DS_Store
+Thumbs.db
