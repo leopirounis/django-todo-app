@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<p>Welcome, {{ request.user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+<html>
+<body>
+  <h1>My To-Do List</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    {% for task in tasks %}
+      <li>
+        {% if task.completed %}
+          <s>{{ task.title }}</s>
+        {% else %}
+          {{ task.title }}
+        {% endif %}
+
+        <!-- Complete/Undo -->
+        <a href="{% url 'complete_task' task.id %}">
+          {% if task.completed %}Undo{% else %}Complete{% endif %}
+        </a>
+
+        <!-- Delete -->
+        <a href="{% url 'delete_task' task.id %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
