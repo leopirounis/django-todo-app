@@ -18,7 +18,7 @@ A simple to-do list web application built with Django. Users can register, log i
 
 - Python 🐍
 - Django 🧱
-- HTML & CSS 🎨
+- HTML 🎨
 - SQLite (default dev database)
 
 ---
